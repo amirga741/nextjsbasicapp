@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: assignment 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: assignment
+  template:
+    metadata:
+      labels:
+        app: assignment 
+    spec:
+      containers:
+        - name: assignment 
+          image: amirtestmic.azurecr.io/assignment
+          ports:
+          - containerPort: Assignment 
